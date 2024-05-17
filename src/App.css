@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+body {
+	margin: 0;
+	font-family: "Comfortaa", sans-serif;
+	background-color: #121212;
+	color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input,
+button {
+	font-family: "Comfortaa", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+	padding: 30px;
+	text-align: left;
+	font-size: 1.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.gradient-text {
+	background: linear-gradient(135deg, #ff6f61, #ffcc5c);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex-grow: 1;
+	padding: 20px;
+	overflow-y: auto;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+	max-width: 768px;
+}
+
+.message {
+	max-width: 60%;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+.message.user {
+	align-self: flex-end;
+	background: linear-gradient(135deg, #ff6f61, #ffcc5c);
+	color: #ffffff;
+}
+
+.message.bot {
+	align-self: flex-start;
+	background: linear-gradient(135deg, #2a2a2a, #5c5c5c);
+	color: #ffffff;
+}
+
+.input-container {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+input {
+	width: 100%;
+	max-width: 900px;
+	padding: 12px;
+	border: none;
+	border-radius: 15px;
+	margin-right: 10px;
+	outline: none;
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 15px;
+	background: linear-gradient(135deg, #ff6f61, #ffcc5c);
+	color: #ffffff;
+	cursor: pointer;
+}
+
+button:hover {
+	background: linear-gradient(135deg, #e65b50, #e5ac4d);
 }
